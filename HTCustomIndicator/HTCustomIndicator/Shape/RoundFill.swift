@@ -14,6 +14,13 @@ class RoundFill: UIView {
         super.init(frame: frame)
         
         layer.cornerRadius = min(frame.width, frame.height) / 2
+        clipsToBounds = true
+    }
+    
+    override var frame: CGRect {
+        didSet {
+            layer.cornerRadius = min(frame.width, frame.height) / 2
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

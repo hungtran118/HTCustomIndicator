@@ -10,6 +10,7 @@
 		8A29760C21460DCB00005DE0 /* HTCustomIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A29760A21460DCB00005DE0 /* HTCustomIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A29761321460DE500005DE0 /* HTIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29761221460DE500005DE0 /* HTIndicator.swift */; };
 		8A29763B2146572A00005DE0 /* RoundFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29763A2146572A00005DE0 /* RoundFill.swift */; };
+		8A32E126214659CC00BEBF89 /* RoundEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A32E125214659CC00BEBF89 /* RoundEmpty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		8A29760B21460DCB00005DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A29761221460DE500005DE0 /* HTIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTIndicator.swift; sourceTree = "<group>"; };
 		8A29763A2146572A00005DE0 /* RoundFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFill.swift; sourceTree = "<group>"; };
+		8A32E125214659CC00BEBF89 /* RoundEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundEmpty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				8A29763A2146572A00005DE0 /* RoundFill.swift */,
+				8A32E125214659CC00BEBF89 /* RoundEmpty.swift */,
 			);
 			path = Shape;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				8A29761321460DE500005DE0 /* HTIndicator.swift in Sources */,
 				8A29763B2146572A00005DE0 /* RoundFill.swift in Sources */,
+				8A32E126214659CC00BEBF89 /* RoundEmpty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

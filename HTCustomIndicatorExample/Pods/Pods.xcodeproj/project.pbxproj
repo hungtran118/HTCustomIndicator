@@ -3,49 +3,89 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8961B76790E82ECC56432C4797D7F6D4 /* Pods-HTCustomIndicatorExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86600666646B4367A3C70FCC3DB6AAE9 /* Pods-HTCustomIndicatorExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93D04F6E282D77A17DCF5573C5244478 /* Pods-HTCustomIndicatorExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A3D3ECD5FF6BA42F0CA4284F7E2EB /* Pods-HTCustomIndicatorExample-dummy.m */; };
-		AA384A32ED0FABBF58A935064F0D1C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		0E511B39DF299FBCE6F58DD1F54ED693 /* Pods-HTCustomIndicatorExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86600666646B4367A3C70FCC3DB6AAE9 /* Pods-HTCustomIndicatorExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D4AA3238C50830BFA3D1D10A6A9C102 /* HTCustomIndicator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87E64AD4940A18EB79A7E07F0F5D4E63 /* HTCustomIndicator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D2579BE0F5AFCBB010D4CE4C500965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		642E322C7956C20387C5FEE7F8BC09CB /* RoundFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4B7ABFD1B2932C50F5BEE7E5F919C /* RoundFill.swift */; };
+		7433135EAD23A2BA0F2D78B60D92AC40 /* HTIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945DF20126BED220C58BF96E4C7235D /* HTIndicator.swift */; };
+		7F92D69B950DB0D2C2CFAADDB024DDC6 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 178173FB15F7B14F3AE80AE0335BDA45 /* Info.plist */; };
+		ACBFF32799E76B0E559B8182E2DB1BA7 /* HTCustomIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */; };
+		CB945122A3673207B6C24A3F76EC0E00 /* Pods-HTCustomIndicatorExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A3D3ECD5FF6BA42F0CA4284F7E2EB /* Pods-HTCustomIndicatorExample-dummy.m */; };
+		E305BC1D8A010CA84F37705FF97AD2A9 /* RoundEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301C741906373CB686A6A8B76FB655EC /* RoundEmpty.swift */; };
+		E4732D8346E7CE96CF3CC8DA68C948D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		F70D7766FB7E0F48BC4D01D37AE05E79 /* HTCustomIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 779A429CE38768C9CF9687F9C1829727 /* HTCustomIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5ACAFEF6A97335D1734C86535895218B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7371AABC279347398FF4EE842D3DBE30;
+			remoteInfo = HTCustomIndicator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0945DF20126BED220C58BF96E4C7235D /* HTIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTIndicator.swift; sourceTree = "<group>"; };
+		11EE404029BECF3B9732A9FDB37D3EB9 /* HTCustomIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTCustomIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15FD03ABA869BC7DF26B58C3F604A137 /* HTCustomIndicator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = HTCustomIndicator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		178173FB15F7B14F3AE80AE0335BDA45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = HTCustomIndicator/Info.plist; sourceTree = "<group>"; };
 		1B4C848BAA372342C3BE7BEE914500C9 /* Pods-HTCustomIndicatorExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTCustomIndicatorExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1CBAC9FE5C414E89B1E96156B3C68296 /* Pods_HTCustomIndicatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HTCustomIndicatorExample.framework; path = "Pods-HTCustomIndicatorExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20A6E32906367A4EE460B11C597CAE24 /* Pods_HTCustomIndicatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTCustomIndicatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		301C741906373CB686A6A8B76FB655EC /* RoundEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundEmpty.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTCustomIndicator-dummy.m"; sourceTree = "<group>"; };
+		779A429CE38768C9CF9687F9C1829727 /* HTCustomIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTCustomIndicator.h; path = HTCustomIndicator/HTCustomIndicator.h; sourceTree = "<group>"; };
 		806B9A9BDE9BD56EBB675465C0168218 /* Pods-HTCustomIndicatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTCustomIndicatorExample.release.xcconfig"; sourceTree = "<group>"; };
 		86600666646B4367A3C70FCC3DB6AAE9 /* Pods-HTCustomIndicatorExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTCustomIndicatorExample-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		87E64AD4940A18EB79A7E07F0F5D4E63 /* HTCustomIndicator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTCustomIndicator-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A88FB6820C192AFAAD4402CC65956708 /* HTCustomIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HTCustomIndicator.modulemap; sourceTree = "<group>"; };
+		B9294A48C8330A03265A2041BF84821A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD373F9DFC2EFE67C1E9423F3EB59D29 /* Pods-HTCustomIndicatorExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTCustomIndicatorExample-resources.sh"; sourceTree = "<group>"; };
 		BE5A3D3ECD5FF6BA42F0CA4284F7E2EB /* Pods-HTCustomIndicatorExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HTCustomIndicatorExample-dummy.m"; sourceTree = "<group>"; };
+		C9CA39CC36FB39984A752839F4E706EF /* HTCustomIndicator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTCustomIndicator.xcconfig; sourceTree = "<group>"; };
 		DC714ADB781CEC4FD9A860459C207585 /* Pods-HTCustomIndicatorExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTCustomIndicatorExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		DE48F80075B0C7DC5A0DF14CC8D3F028 /* Pods-HTCustomIndicatorExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTCustomIndicatorExample-frameworks.sh"; sourceTree = "<group>"; };
+		E2F0FB964B3E5362018CE5E7A7E16042 /* HTCustomIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTCustomIndicator-prefix.pch"; sourceTree = "<group>"; };
+		EAF4B7ABFD1B2932C50F5BEE7E5F919C /* RoundFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundFill.swift; sourceTree = "<group>"; };
 		F92AA1692270857AB5F807D822A423C2 /* Pods-HTCustomIndicatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTCustomIndicatorExample.debug.xcconfig"; sourceTree = "<group>"; };
 		F9A188D6ABDA9FD2548473C3FBECD2D9 /* Pods-HTCustomIndicatorExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HTCustomIndicatorExample.modulemap"; sourceTree = "<group>"; };
 		FC2F3B075DD0DDDBEA7B516C4B2BB4E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D693B355D41BB7BA7BB5AD930C0005CB /* Frameworks */ = {
+		322242E92BCB860D08A2C2C0A85831D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA384A32ED0FABBF58A935064F0D1C64 /* Foundation.framework in Frameworks */,
+				E4732D8346E7CE96CF3CC8DA68C948D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		375ED283866537E6A07BC1200A832889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61D2579BE0F5AFCBB010D4CE4C500965 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		282AB84A7F37582827946CD61FCCF7B4 /* Products */ = {
+		2BA8789AB299FB4BF61AD1EE4F0C05BE /* HTIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				1CBAC9FE5C414E89B1E96156B3C68296 /* Pods_HTCustomIndicatorExample.framework */,
+				0945DF20126BED220C58BF96E4C7235D /* HTIndicator.swift */,
 			);
-			name = Products;
+			name = HTIndicator;
+			path = HTCustomIndicator/HTIndicator;
 			sourceTree = "<group>";
 		};
 		542253E243D6DC34ACC389B38F7E5CE1 /* Targets Support Files */ = {
@@ -68,10 +108,20 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E9E71D31CEB7C76F6FE3E27DDEBB17EF /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				282AB84A7F37582827946CD61FCCF7B4 /* Products */,
+				939064B1598D3B843B5726BC6FC98952 /* Products */,
 				542253E243D6DC34ACC389B38F7E5CE1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		939064B1598D3B843B5726BC6FC98952 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11EE404029BECF3B9732A9FDB37D3EB9 /* HTCustomIndicator.framework */,
+				20A6E32906367A4EE460B11C597CAE24 /* Pods_HTCustomIndicatorExample.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -80,6 +130,20 @@
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8DBB2A01B0F92410727C00B26F3685A /* HTCustomIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				779A429CE38768C9CF9687F9C1829727 /* HTCustomIndicator.h */,
+				178173FB15F7B14F3AE80AE0335BDA45 /* Info.plist */,
+				E6FF256DC0ED0D83F0A3596EFEB0FC27 /* Shape */,
+				2BA8789AB299FB4BF61AD1EE4F0C05BE /* HTIndicator */,
+				F21E10230A203776D039C842ACB6002E /* Pod */,
+				DCFF22C27BB3C9E9DC750035ABD7D7B4 /* Support Files */,
+			);
+			name = HTCustomIndicator;
+			path = ../../HTCustomIndicator;
 			sourceTree = "<group>";
 		};
 		DCE222685F2F068D03316DBC318594CC /* Pods-HTCustomIndicatorExample */ = {
@@ -100,35 +164,102 @@
 			path = "Target Support Files/Pods-HTCustomIndicatorExample";
 			sourceTree = "<group>";
 		};
+		DCFF22C27BB3C9E9DC750035ABD7D7B4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A88FB6820C192AFAAD4402CC65956708 /* HTCustomIndicator.modulemap */,
+				C9CA39CC36FB39984A752839F4E706EF /* HTCustomIndicator.xcconfig */,
+				6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */,
+				E2F0FB964B3E5362018CE5E7A7E16042 /* HTCustomIndicator-prefix.pch */,
+				87E64AD4940A18EB79A7E07F0F5D4E63 /* HTCustomIndicator-umbrella.h */,
+				B9294A48C8330A03265A2041BF84821A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../HTCustomIndicatorExample/Pods/Target Support Files/HTCustomIndicator";
+			sourceTree = "<group>";
+		};
+		E6FF256DC0ED0D83F0A3596EFEB0FC27 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				301C741906373CB686A6A8B76FB655EC /* RoundEmpty.swift */,
+				EAF4B7ABFD1B2932C50F5BEE7E5F919C /* RoundFill.swift */,
+			);
+			name = Shape;
+			path = HTCustomIndicator/Shape;
+			sourceTree = "<group>";
+		};
+		E9E71D31CEB7C76F6FE3E27DDEBB17EF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8DBB2A01B0F92410727C00B26F3685A /* HTCustomIndicator */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F21E10230A203776D039C842ACB6002E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				15FD03ABA869BC7DF26B58C3F604A137 /* HTCustomIndicator.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		15E436EF4249C45F686DF7219E09B6BD /* Headers */ = {
+		099882D61984C7B362BEECCDF1DDDCCB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8961B76790E82ECC56432C4797D7F6D4 /* Pods-HTCustomIndicatorExample-umbrella.h in Headers */,
+				0E511B39DF299FBCE6F58DD1F54ED693 /* Pods-HTCustomIndicatorExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9513E6787081BD291FB6A0F4CB633F91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D4AA3238C50830BFA3D1D10A6A9C102 /* HTCustomIndicator-umbrella.h in Headers */,
+				F70D7766FB7E0F48BC4D01D37AE05E79 /* HTCustomIndicator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		059F5E6925497923BBDF6810DC0FF7AD /* Pods-HTCustomIndicatorExample */ = {
+		7371AABC279347398FF4EE842D3DBE30 /* HTCustomIndicator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17E61B43A0995B95128E07F57548A500 /* Build configuration list for PBXNativeTarget "Pods-HTCustomIndicatorExample" */;
+			buildConfigurationList = 15123201D9C8B04C43F392B763D49A9C /* Build configuration list for PBXNativeTarget "HTCustomIndicator" */;
 			buildPhases = (
-				F77BFBEB16BC1F079F72E4DF93A57EED /* Sources */,
-				D693B355D41BB7BA7BB5AD930C0005CB /* Frameworks */,
-				15E436EF4249C45F686DF7219E09B6BD /* Headers */,
+				39C5306A0DF82EE69AED763CC81AC122 /* Sources */,
+				375ED283866537E6A07BC1200A832889 /* Frameworks */,
+				9513E6787081BD291FB6A0F4CB633F91 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = HTCustomIndicator;
+			productName = HTCustomIndicator;
+			productReference = 11EE404029BECF3B9732A9FDB37D3EB9 /* HTCustomIndicator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E81AB1205620AE876140FB6A5DD2644D /* Pods-HTCustomIndicatorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF29DF14F9085A6A2700C73E9CC3ECB /* Build configuration list for PBXNativeTarget "Pods-HTCustomIndicatorExample" */;
+			buildPhases = (
+				A7D1EBDC562D026F6DB8CAC667122F17 /* Sources */,
+				322242E92BCB860D08A2C2C0A85831D0 /* Frameworks */,
+				099882D61984C7B362BEECCDF1DDDCCB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7F2EEF3B925A3FF4C91605C177193C3 /* PBXTargetDependency */,
+			);
 			name = "Pods-HTCustomIndicatorExample";
 			productName = "Pods-HTCustomIndicatorExample";
-			productReference = 1CBAC9FE5C414E89B1E96156B3C68296 /* Pods_HTCustomIndicatorExample.framework */;
+			productReference = 20A6E32906367A4EE460B11C597CAE24 /* Pods_HTCustomIndicatorExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -148,28 +279,86 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 282AB84A7F37582827946CD61FCCF7B4 /* Products */;
+			productRefGroup = 939064B1598D3B843B5726BC6FC98952 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				059F5E6925497923BBDF6810DC0FF7AD /* Pods-HTCustomIndicatorExample */,
+				7371AABC279347398FF4EE842D3DBE30 /* HTCustomIndicator */,
+				E81AB1205620AE876140FB6A5DD2644D /* Pods-HTCustomIndicatorExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F77BFBEB16BC1F079F72E4DF93A57EED /* Sources */ = {
+		39C5306A0DF82EE69AED763CC81AC122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93D04F6E282D77A17DCF5573C5244478 /* Pods-HTCustomIndicatorExample-dummy.m in Sources */,
+				ACBFF32799E76B0E559B8182E2DB1BA7 /* HTCustomIndicator-dummy.m in Sources */,
+				7433135EAD23A2BA0F2D78B60D92AC40 /* HTIndicator.swift in Sources */,
+				7F92D69B950DB0D2C2CFAADDB024DDC6 /* Info.plist in Sources */,
+				E305BC1D8A010CA84F37705FF97AD2A9 /* RoundEmpty.swift in Sources */,
+				642E322C7956C20387C5FEE7F8BC09CB /* RoundFill.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7D1EBDC562D026F6DB8CAC667122F17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB945122A3673207B6C24A3F76EC0E00 /* Pods-HTCustomIndicatorExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D7F2EEF3B925A3FF4C91605C177193C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTCustomIndicator;
+			target = 7371AABC279347398FF4EE842D3DBE30 /* HTCustomIndicator */;
+			targetProxy = 5ACAFEF6A97335D1734C86535895218B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		41C33F9272CD3F13D59B8198B182DF40 /* Debug */ = {
+		0376D385688FB376B5A82FC5B6676033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 806B9A9BDE9BD56EBB675465C0168218 /* Pods-HTCustomIndicatorExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTCustomIndicatorExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2794AA1B35289101F34AFA0757B75926 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F92AA1692270857AB5F807D822A423C2 /* Pods-HTCustomIndicatorExample.debug.xcconfig */;
 			buildSettings = {
@@ -187,11 +376,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-HTCustomIndicatorExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample.modulemap";
 				OTHER_LDFLAGS = "";
@@ -201,6 +386,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -328,12 +515,10 @@
 			};
 			name = Release;
 		};
-		C9158BF9CE64990F38C4777165226AB4 /* Release */ = {
+		838EE6564D65F3C548EBCCFC7628D4BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 806B9A9BDE9BD56EBB675465C0168218 /* Pods-HTCustomIndicatorExample.release.xcconfig */;
+			baseConfigurationReference = C9CA39CC36FB39984A752839F4E706EF /* HTCustomIndicator.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -343,23 +528,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HTCustomIndicatorExample/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/HTCustomIndicator/HTCustomIndicator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTCustomIndicator/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTCustomIndicator/HTCustomIndicator.modulemap";
+				PRODUCT_MODULE_NAME = HTCustomIndicator;
+				PRODUCT_NAME = HTCustomIndicator;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -367,14 +548,46 @@
 			};
 			name = Release;
 		};
+		F1DCDB3715B1566FD361118081067EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9CA39CC36FB39984A752839F4E706EF /* HTCustomIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HTCustomIndicator/HTCustomIndicator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTCustomIndicator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTCustomIndicator/HTCustomIndicator.modulemap";
+				PRODUCT_MODULE_NAME = HTCustomIndicator;
+				PRODUCT_NAME = HTCustomIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17E61B43A0995B95128E07F57548A500 /* Build configuration list for PBXNativeTarget "Pods-HTCustomIndicatorExample" */ = {
+		15123201D9C8B04C43F392B763D49A9C /* Build configuration list for PBXNativeTarget "HTCustomIndicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41C33F9272CD3F13D59B8198B182DF40 /* Debug */,
-				C9158BF9CE64990F38C4777165226AB4 /* Release */,
+				F1DCDB3715B1566FD361118081067EB9 /* Debug */,
+				838EE6564D65F3C548EBCCFC7628D4BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -384,6 +597,15 @@
 			buildConfigurations = (
 				691EE0234A3BA1A3B057D3A4C23C9CCC /* Debug */,
 				703082A85162812D3B777E668767AD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF29DF14F9085A6A2700C73E9CC3ECB /* Build configuration list for PBXNativeTarget "Pods-HTCustomIndicatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2794AA1B35289101F34AFA0757B75926 /* Debug */,
+				0376D385688FB376B5A82FC5B6676033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
