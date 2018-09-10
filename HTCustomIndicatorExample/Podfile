@@ -6,7 +6,7 @@ target 'HTCustomIndicatorExample' do
   use_frameworks!
 
   # Pods for HTCustomIndicatorExample
-
-pod 'HTCustomIndicator', :path => "../HTCustomIndicator"
+  
+  pod 'HTCustomIndicator', :path => "../HTCustomIndicator"
 
 end

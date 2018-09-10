@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8A29760C21460DCB00005DE0 /* HTCustomIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A29760A21460DCB00005DE0 /* HTCustomIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A29761321460DE500005DE0 /* HTIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29761221460DE500005DE0 /* HTIndicator.swift */; };
+		8A2976382146553900005DE0 /* RoundFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2976372146553900005DE0 /* RoundFill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		8A29760A21460DCB00005DE0 /* HTCustomIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTCustomIndicator.h; sourceTree = "<group>"; };
 		8A29760B21460DCB00005DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A29761221460DE500005DE0 /* HTIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTIndicator.swift; sourceTree = "<group>"; };
+		8A2976372146553900005DE0 /* RoundFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundFill.swift; path = ../../../../../../../Documents/RoundFill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,11 +50,20 @@
 		8A29760921460DCB00005DE0 /* HTCustomIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				8A297632214651AA00005DE0 /* Shape */,
 				8A29760A21460DCB00005DE0 /* HTCustomIndicator.h */,
 				8A29760B21460DCB00005DE0 /* Info.plist */,
 				8A29761221460DE500005DE0 /* HTIndicator.swift */,
 			);
 			path = HTCustomIndicator;
+			sourceTree = "<group>";
+		};
+		8A297632214651AA00005DE0 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				8A2976372146553900005DE0 /* RoundFill.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A29761321460DE500005DE0 /* HTIndicator.swift in Sources */,
+				8A2976382146553900005DE0 /* RoundFill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

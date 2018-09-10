@@ -12,8 +12,9 @@ public class HTIndicator {
     
     private init() {}
     
-    public static func create() -> String {
-        return "Success"
+    public static func create(frame: CGRect) -> UIView {
+        let roundFill = RoundFill(frame: frame)
+        return roundFill
     }
     
     public static func test() -> String {
