@@ -1,6 +1,0 @@
-framework module HTCustomIndicator {
-  umbrella header "HTCustomIndicator-umbrella.h"
-
-  export *
-  module * { export * }
-}

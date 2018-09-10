@@ -1,6 +1,6 @@
 {
   "name": "HTCustomIndicator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Custom Indicator",
   "description": "Create some awesome indicators",
   "homepage": "https://github.com/hungtran118/HTCustomIndicator",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hungtran118/HTCustomIndicator.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": "HTCustomIndicator/**/*"
 }

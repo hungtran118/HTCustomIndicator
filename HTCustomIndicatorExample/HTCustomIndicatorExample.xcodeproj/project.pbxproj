@@ -99,7 +99,6 @@
 				8A2976192146327800005DE0 /* Sources */,
 				8A29761A2146327800005DE0 /* Frameworks */,
 				8A29761B2146327800005DE0 /* Resources */,
-				CACE2B8D510C7FC9A3F15F86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,24 +172,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CACE2B8D510C7FC9A3F15F86 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HTCustomIndicator/HTCustomIndicator.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTCustomIndicator.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

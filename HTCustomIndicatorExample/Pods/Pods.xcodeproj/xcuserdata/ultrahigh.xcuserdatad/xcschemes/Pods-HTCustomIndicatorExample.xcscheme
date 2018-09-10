@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E81AB1205620AE876140FB6A5DD2644D"
+               BlueprintIdentifier = "059F5E6925497923BBDF6810DC0FF7AD"
                BlueprintName = "Pods-HTCustomIndicatorExample"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-HTCustomIndicatorExample.framework">

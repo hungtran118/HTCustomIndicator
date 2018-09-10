@@ -7,6 +7,5 @@ target 'HTCustomIndicatorExample' do
 
   # Pods for HTCustomIndicatorExample
   
-  pod 'HTCustomIndicator', :path => "../HTCustomIndicator"
 
 end
