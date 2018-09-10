@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "HungTran" => "hung.tgh95@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/hungtran118/HTCustomIndicator.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/hungtran118/HTCustomIndicator.git", :tag => "0.0.2" }
   s.source_files  = "HTCustomIndicator/**/*"
 
 end
