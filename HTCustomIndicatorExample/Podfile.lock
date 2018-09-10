@@ -1,0 +1,16 @@
+PODS:
+  - HTCustomIndicator (0.0.1)
+
+DEPENDENCIES:
+  - HTCustomIndicator (from `../HTCustomIndicator`)
+
+EXTERNAL SOURCES:
+  HTCustomIndicator:
+    :path: "../HTCustomIndicator"
+
+SPEC CHECKSUMS:
+  HTCustomIndicator: c9d8791dabc02eb49da3fcd7a678e5754e195169
+
+PODFILE CHECKSUM: 627eddae374c16ce9a290cadadde9ba9d2bda59c
+
+COCOAPODS: 1.5.3

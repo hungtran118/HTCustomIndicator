@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B283DAF1D0DA7589DBB8E07 /* Pods_HTCustomIndicatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EDC9990A1FF7CC1A2B4FE6 /* Pods_HTCustomIndicatorExample.framework */; };
+		8A2976212146327800005DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2976202146327800005DE0 /* AppDelegate.swift */; };
+		8A2976232146327800005DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2976222146327800005DE0 /* ViewController.swift */; };
+		8A2976262146327800005DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A2976242146327800005DE0 /* Main.storyboard */; };
+		8A2976282146327900005DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2976272146327900005DE0 /* Assets.xcassets */; };
+		8A29762B2146327900005DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A2976292146327900005DE0 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38EDC9990A1FF7CC1A2B4FE6 /* Pods_HTCustomIndicatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTCustomIndicatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61D50127102EC50B28CB2352 /* Pods-HTCustomIndicatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTCustomIndicatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample.release.xcconfig"; sourceTree = "<group>"; };
+		8A29761D2146327800005DE0 /* HTCustomIndicatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTCustomIndicatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A2976202146327800005DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A2976222146327800005DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A2976252146327800005DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A2976272146327900005DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A29762A2146327900005DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A29762C2146327900005DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		915D2E367F1846A7B148C518 /* Pods-HTCustomIndicatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTCustomIndicatorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A29761A2146327800005DE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B283DAF1D0DA7589DBB8E07 /* Pods_HTCustomIndicatorExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13C7661908DA8E3B63C0DB5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				915D2E367F1846A7B148C518 /* Pods-HTCustomIndicatorExample.debug.xcconfig */,
+				61D50127102EC50B28CB2352 /* Pods-HTCustomIndicatorExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A2976142146327800005DE0 = {
+			isa = PBXGroup;
+			children = (
+				8A29761F2146327800005DE0 /* HTCustomIndicatorExample */,
+				8A29761E2146327800005DE0 /* Products */,
+				13C7661908DA8E3B63C0DB5F /* Pods */,
+				DEE297FA469FA2E8AE212356 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8A29761E2146327800005DE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A29761D2146327800005DE0 /* HTCustomIndicatorExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A29761F2146327800005DE0 /* HTCustomIndicatorExample */ = {
+			isa = PBXGroup;
+			children = (
+				8A2976202146327800005DE0 /* AppDelegate.swift */,
+				8A2976222146327800005DE0 /* ViewController.swift */,
+				8A2976242146327800005DE0 /* Main.storyboard */,
+				8A2976272146327900005DE0 /* Assets.xcassets */,
+				8A2976292146327900005DE0 /* LaunchScreen.storyboard */,
+				8A29762C2146327900005DE0 /* Info.plist */,
+			);
+			path = HTCustomIndicatorExample;
+			sourceTree = "<group>";
+		};
+		DEE297FA469FA2E8AE212356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38EDC9990A1FF7CC1A2B4FE6 /* Pods_HTCustomIndicatorExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A29761C2146327800005DE0 /* HTCustomIndicatorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A29762F2146327900005DE0 /* Build configuration list for PBXNativeTarget "HTCustomIndicatorExample" */;
+			buildPhases = (
+				0F8DBFD8C3CC59DA874EFBC8 /* [CP] Check Pods Manifest.lock */,
+				8A2976192146327800005DE0 /* Sources */,
+				8A29761A2146327800005DE0 /* Frameworks */,
+				8A29761B2146327800005DE0 /* Resources */,
+				AC13E122AA4089884951BEC8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTCustomIndicatorExample;
+			productName = HTCustomIndicatorExample;
+			productReference = 8A29761D2146327800005DE0 /* HTCustomIndicatorExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A2976152146327800005DE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = HT;
+				TargetAttributes = {
+					8A29761C2146327800005DE0 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 8A2976182146327800005DE0 /* Build configuration list for PBXProject "HTCustomIndicatorExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A2976142146327800005DE0;
+			productRefGroup = 8A29761E2146327800005DE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A29761C2146327800005DE0 /* HTCustomIndicatorExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A29761B2146327800005DE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A29762B2146327900005DE0 /* LaunchScreen.storyboard in Resources */,
+				8A2976282146327900005DE0 /* Assets.xcassets in Resources */,
+				8A2976262146327800005DE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F8DBFD8C3CC59DA874EFBC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HTCustomIndicatorExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC13E122AA4089884951BEC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HTCustomIndicator/HTCustomIndicator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTCustomIndicator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTCustomIndicatorExample/Pods-HTCustomIndicatorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A2976192146327800005DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2976232146327800005DE0 /* ViewController.swift in Sources */,
+				8A2976212146327800005DE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A2976242146327800005DE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A2976252146327800005DE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A2976292146327900005DE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A29762A2146327900005DE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A29762D2146327900005DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A29762E2146327900005DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A2976302146327900005DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915D2E367F1846A7B148C518 /* Pods-HTCustomIndicatorExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QBA97J5G9;
+				INFOPLIST_FILE = HTCustomIndicatorExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HTIndicator.HTCustomIndicatorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A2976312146327900005DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61D50127102EC50B28CB2352 /* Pods-HTCustomIndicatorExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QBA97J5G9;
+				INFOPLIST_FILE = HTCustomIndicatorExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HTIndicator.HTCustomIndicatorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A2976182146327800005DE0 /* Build configuration list for PBXProject "HTCustomIndicatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A29762D2146327900005DE0 /* Debug */,
+				8A29762E2146327900005DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A29762F2146327900005DE0 /* Build configuration list for PBXNativeTarget "HTCustomIndicatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2976302146327900005DE0 /* Debug */,
+				8A2976312146327900005DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A2976152146327800005DE0 /* Project object */;
+}
