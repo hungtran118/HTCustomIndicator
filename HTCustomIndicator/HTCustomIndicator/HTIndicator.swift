@@ -15,6 +15,10 @@ public class HTIndicator {
     public static func create() -> String {
         return "Success"
     }
+    
+    public static func test() -> String {
+        return "Test"
+    }
 }
 
 
