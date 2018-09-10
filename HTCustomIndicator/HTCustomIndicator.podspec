@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HTCustomIndicator"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Custom Indicator"
   s.description  = "Create some awesome indicators"
   s.homepage     = "https://github.com/hungtran118/HTCustomIndicator"
