@@ -10,12 +10,14 @@
 		0E511B39DF299FBCE6F58DD1F54ED693 /* Pods-HTCustomIndicatorExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86600666646B4367A3C70FCC3DB6AAE9 /* Pods-HTCustomIndicatorExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D4AA3238C50830BFA3D1D10A6A9C102 /* HTCustomIndicator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87E64AD4940A18EB79A7E07F0F5D4E63 /* HTCustomIndicator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D2579BE0F5AFCBB010D4CE4C500965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		642E322C7956C20387C5FEE7F8BC09CB /* RoundFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4B7ABFD1B2932C50F5BEE7E5F919C /* RoundFill.swift */; };
 		7433135EAD23A2BA0F2D78B60D92AC40 /* HTIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945DF20126BED220C58BF96E4C7235D /* HTIndicator.swift */; };
 		7F92D69B950DB0D2C2CFAADDB024DDC6 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 178173FB15F7B14F3AE80AE0335BDA45 /* Info.plist */; };
+		8A03F46121645EB9000D8CBD /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03F46021645EB9000D8CBD /* Animations.swift */; };
+		8A03F46321646117000D8CBD /* IndicatorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03F46221646117000D8CBD /* IndicatorTypes.swift */; };
+		8AD233C4215A0AC1003DEAB5 /* Indicator1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD233C3215A0AC1003DEAB5 /* Indicator1.swift */; };
+		8AD233C7215A0CE3003DEAB5 /* BaseIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */; };
 		ACBFF32799E76B0E559B8182E2DB1BA7 /* HTCustomIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */; };
 		CB945122A3673207B6C24A3F76EC0E00 /* Pods-HTCustomIndicatorExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A3D3ECD5FF6BA42F0CA4284F7E2EB /* Pods-HTCustomIndicatorExample-dummy.m */; };
-		E305BC1D8A010CA84F37705FF97AD2A9 /* RoundEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301C741906373CB686A6A8B76FB655EC /* RoundEmpty.swift */; };
 		E4732D8346E7CE96CF3CC8DA68C948D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		F70D7766FB7E0F48BC4D01D37AE05E79 /* HTCustomIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 779A429CE38768C9CF9687F9C1829727 /* HTCustomIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -37,13 +39,16 @@
 		178173FB15F7B14F3AE80AE0335BDA45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = HTCustomIndicator/Info.plist; sourceTree = "<group>"; };
 		1B4C848BAA372342C3BE7BEE914500C9 /* Pods-HTCustomIndicatorExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTCustomIndicatorExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		20A6E32906367A4EE460B11C597CAE24 /* Pods_HTCustomIndicatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTCustomIndicatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		301C741906373CB686A6A8B76FB655EC /* RoundEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundEmpty.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTCustomIndicator-dummy.m"; sourceTree = "<group>"; };
 		779A429CE38768C9CF9687F9C1829727 /* HTCustomIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTCustomIndicator.h; path = HTCustomIndicator/HTCustomIndicator.h; sourceTree = "<group>"; };
 		806B9A9BDE9BD56EBB675465C0168218 /* Pods-HTCustomIndicatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTCustomIndicatorExample.release.xcconfig"; sourceTree = "<group>"; };
 		86600666646B4367A3C70FCC3DB6AAE9 /* Pods-HTCustomIndicatorExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTCustomIndicatorExample-umbrella.h"; sourceTree = "<group>"; };
 		87E64AD4940A18EB79A7E07F0F5D4E63 /* HTCustomIndicator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTCustomIndicator-umbrella.h"; sourceTree = "<group>"; };
+		8A03F46021645EB9000D8CBD /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		8A03F46221646117000D8CBD /* IndicatorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorTypes.swift; sourceTree = "<group>"; };
+		8AD233C3215A0AC1003DEAB5 /* Indicator1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator1.swift; sourceTree = "<group>"; };
+		8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseIndicator.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A88FB6820C192AFAAD4402CC65956708 /* HTCustomIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HTCustomIndicator.modulemap; sourceTree = "<group>"; };
 		B9294A48C8330A03265A2041BF84821A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		DC714ADB781CEC4FD9A860459C207585 /* Pods-HTCustomIndicatorExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTCustomIndicatorExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		DE48F80075B0C7DC5A0DF14CC8D3F028 /* Pods-HTCustomIndicatorExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTCustomIndicatorExample-frameworks.sh"; sourceTree = "<group>"; };
 		E2F0FB964B3E5362018CE5E7A7E16042 /* HTCustomIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTCustomIndicator-prefix.pch"; sourceTree = "<group>"; };
-		EAF4B7ABFD1B2932C50F5BEE7E5F919C /* RoundFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundFill.swift; sourceTree = "<group>"; };
 		F92AA1692270857AB5F807D822A423C2 /* Pods-HTCustomIndicatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTCustomIndicatorExample.debug.xcconfig"; sourceTree = "<group>"; };
 		F9A188D6ABDA9FD2548473C3FBECD2D9 /* Pods-HTCustomIndicatorExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HTCustomIndicatorExample.modulemap"; sourceTree = "<group>"; };
 		FC2F3B075DD0DDDBEA7B516C4B2BB4E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +86,9 @@
 		2BA8789AB299FB4BF61AD1EE4F0C05BE /* HTIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				0945DF20126BED220C58BF96E4C7235D /* HTIndicator.swift */,
+				8A03F46521646195000D8CBD /* TypesEnum */,
+				8A03F46421646187000D8CBD /* Main */,
+				8AD233C5215A0AC3003DEAB5 /* Indicators */,
 			);
 			name = HTIndicator;
 			path = HTCustomIndicator/HTIndicator;
@@ -115,6 +121,31 @@
 			);
 			sourceTree = "<group>";
 		};
+		8A03F46421646187000D8CBD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0945DF20126BED220C58BF96E4C7235D /* HTIndicator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8A03F46521646195000D8CBD /* TypesEnum */ = {
+			isa = PBXGroup;
+			children = (
+				8A03F46221646117000D8CBD /* IndicatorTypes.swift */,
+			);
+			path = TypesEnum;
+			sourceTree = "<group>";
+		};
+		8AD233C5215A0AC3003DEAB5 /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */,
+				8AD233C3215A0AC1003DEAB5 /* Indicator1.swift */,
+			);
+			path = Indicators;
+			sourceTree = "<group>";
+		};
 		939064B1598D3B843B5726BC6FC98952 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +168,7 @@
 			children = (
 				779A429CE38768C9CF9687F9C1829727 /* HTCustomIndicator.h */,
 				178173FB15F7B14F3AE80AE0335BDA45 /* Info.plist */,
-				E6FF256DC0ED0D83F0A3596EFEB0FC27 /* Shape */,
+				E6FF256DC0ED0D83F0A3596EFEB0FC27 /* Animations */,
 				2BA8789AB299FB4BF61AD1EE4F0C05BE /* HTIndicator */,
 				F21E10230A203776D039C842ACB6002E /* Pod */,
 				DCFF22C27BB3C9E9DC750035ABD7D7B4 /* Support Files */,
@@ -178,14 +209,13 @@
 			path = "../HTCustomIndicatorExample/Pods/Target Support Files/HTCustomIndicator";
 			sourceTree = "<group>";
 		};
-		E6FF256DC0ED0D83F0A3596EFEB0FC27 /* Shape */ = {
+		E6FF256DC0ED0D83F0A3596EFEB0FC27 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				301C741906373CB686A6A8B76FB655EC /* RoundEmpty.swift */,
-				EAF4B7ABFD1B2932C50F5BEE7E5F919C /* RoundFill.swift */,
+				8A03F46021645EB9000D8CBD /* Animations.swift */,
 			);
-			name = Shape;
-			path = HTCustomIndicator/Shape;
+			name = Animations;
+			path = HTCustomIndicator/Animations;
 			sourceTree = "<group>";
 		};
 		E9E71D31CEB7C76F6FE3E27DDEBB17EF /* Development Pods */ = {
@@ -296,9 +326,11 @@
 			files = (
 				ACBFF32799E76B0E559B8182E2DB1BA7 /* HTCustomIndicator-dummy.m in Sources */,
 				7433135EAD23A2BA0F2D78B60D92AC40 /* HTIndicator.swift in Sources */,
+				8A03F46121645EB9000D8CBD /* Animations.swift in Sources */,
+				8A03F46321646117000D8CBD /* IndicatorTypes.swift in Sources */,
 				7F92D69B950DB0D2C2CFAADDB024DDC6 /* Info.plist in Sources */,
-				E305BC1D8A010CA84F37705FF97AD2A9 /* RoundEmpty.swift in Sources */,
-				642E322C7956C20387C5FEE7F8BC09CB /* RoundFill.swift in Sources */,
+				8AD233C4215A0AC1003DEAB5 /* Indicator1.swift in Sources */,
+				8AD233C7215A0CE3003DEAB5 /* BaseIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

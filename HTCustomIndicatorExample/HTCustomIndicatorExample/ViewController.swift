@@ -10,15 +10,27 @@ import UIKit
 import HTCustomIndicator
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let htIndicator = HTIndicator(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        htIndicator.color = .blue
-        htIndicator.startAnimate()
+//        htIndicator.color = .blue
         
-        self.view.addSubview(htIndicator)
+        let htIndicator2 = HTIndicator()
+        htIndicator2.color = .red
+        htIndicator2.frame = CGRect(x: 200, y: 200, width: 50, height: 50)
+        htIndicator2.indicatorType = .indicator1
+        
+        self.view.addSubview(htIndicator2)
+        
+        
     }
 }
+
+
+
+
+
+
+
 
