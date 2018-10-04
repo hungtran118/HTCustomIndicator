@@ -11,6 +11,7 @@ import Foundation
 public class BaseIndicator: UIView {
     
     //MARK:- SUPPORT VARIABLES
+    var isAnimating: Bool = false
     
     //MARK:- Custom color
     
@@ -29,9 +30,17 @@ public class BaseIndicator: UIView {
     //MARK: - Config
     
     func setColor() {}
+    
     func setFrame() {}
-    public func setToBaseState() {}
-    public func startAnimate() {}
+    
+    func setToBaseState() {
+        isAnimating = false
+    }
+    
+    public func startAnimate() {
+        guard !isAnimating else { return }
+        isAnimating = true
+    }
 }
 
 

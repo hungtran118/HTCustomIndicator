@@ -9,10 +9,10 @@ import Foundation
 
 class Animations {
     
-    static let heightAnimation = CABasicAnimation(keyPath: "bounds.size.height")
-    static let sizeAnimation = CABasicAnimation(keyPath: "bounds.size")
-    static let cornerRadiusAnimation = CABasicAnimation(keyPath: "cornerRadius")
-    static let fadeAnimation = CABasicAnimation(keyPath: "opacity")
+    let heightAnimation = CABasicAnimation(keyPath: "bounds.size.height")
+    let sizeAnimation = CABasicAnimation(keyPath: "bounds.size")
+    let cornerRadiusAnimation = CABasicAnimation(keyPath: "cornerRadius")
+    let fadeAnimation = CABasicAnimation(keyPath: "opacity")
 }
 
 

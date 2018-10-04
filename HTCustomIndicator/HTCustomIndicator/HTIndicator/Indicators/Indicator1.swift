@@ -16,14 +16,15 @@ public class Indicator1: BaseIndicator {
     private var stick3 = UIView()
     private var stick4 = UIView()
     private var stick5 = UIView()
-    private let heightAnimation1 = Animations.heightAnimation
-    private let heightAnimation2 = Animations.heightAnimation
+    private let heightAnimation1 = Animations().heightAnimation
+    private let heightAnimation2 = Animations().heightAnimation
     
     //MARK:- Init
+    
     override public init(frame: CGRect) {
         super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: min(frame.width, frame.height), height: min(frame.width, frame.height)))
         
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = .clear
         self.setColor()
         self.setToBaseState()
         self.addSubview(stick1)
@@ -54,7 +55,8 @@ public class Indicator1: BaseIndicator {
         startAnimate()
     }
     
-    public override func setToBaseState() {
+    override func setToBaseState() {
+        super.setToBaseState()
         
         configStick(stick1, index: 0)
         configStick(stick2, index: 1)
@@ -80,6 +82,7 @@ public class Indicator1: BaseIndicator {
     }
     
     override public func startAnimate() {
+        super.startAnimate()
         
         animate(view: stick1, duration: 0)
         animate(view: stick2, duration: 0.25)

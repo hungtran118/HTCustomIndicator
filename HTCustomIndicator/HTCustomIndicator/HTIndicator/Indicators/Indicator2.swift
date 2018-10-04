@@ -16,15 +16,16 @@ class Indicator2: BaseIndicator {
     private var circle3 = UIView()
     
     private let groupAnimation = CAAnimationGroup()
-    private let sizeAnimation = Animations.sizeAnimation
-    private let cornerRadiusAnimation = Animations.cornerRadiusAnimation
-    private let fadeAnimation = Animations.fadeAnimation
+    private let sizeAnimation = Animations().sizeAnimation
+    private let cornerRadiusAnimation = Animations().cornerRadiusAnimation
+    private let fadeAnimation = Animations().fadeAnimation
     
     //MARK:- Init
+    
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: min(frame.width, frame.height), height: min(frame.width, frame.height)))
         
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = .clear
         self.setColor()
         self.setToBaseState()
         self.addSubview(circle1)
@@ -51,7 +52,8 @@ class Indicator2: BaseIndicator {
         startAnimate()
     }
     
-    public override func setToBaseState() {
+    override func setToBaseState() {
+        super.setToBaseState()
         
         configCircle(circle1, index: 0)
         configCircle(circle2, index: 1)
@@ -67,6 +69,7 @@ class Indicator2: BaseIndicator {
     }
     
     override public func startAnimate() {
+        super.startAnimate()
         
         animate(view: circle1, delay: 0)
         animate(view: circle2, delay: 0.2)
