@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         self.view.addSubview(htIndicator2)
         self.view.addSubview(htIndicator3)
         
+        
+        htIndicator1.color = .green
     }
 }
 

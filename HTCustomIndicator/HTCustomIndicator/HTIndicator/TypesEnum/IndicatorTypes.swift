@@ -12,11 +12,6 @@ public enum HTIndicatorType {
     case indicator1
     case indicator2
     case indicator3
-    case indicator4
-    case indicator5
-    case indicator6
-    case indicator7
-    case indicator8
 }
 
 
