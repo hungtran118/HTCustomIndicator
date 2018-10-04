@@ -16,14 +16,16 @@ public class Indicator1: BaseIndicator {
     private var stick3 = UIView()
     private var stick4 = UIView()
     private var stick5 = UIView()
+    private let heightAnimation1 = Animations.heightAnimation
+    private let heightAnimation2 = Animations.heightAnimation
     
     //MARK:- Init
     override public init(frame: CGRect) {
         super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: min(frame.width, frame.height), height: min(frame.width, frame.height)))
         
-        self.setColor()
-        self.toBaseState()
         self.backgroundColor = UIColor.clear
+        self.setColor()
+        self.setToBaseState()
         self.addSubview(stick1)
         self.addSubview(stick2)
         self.addSubview(stick3)
@@ -48,11 +50,11 @@ public class Indicator1: BaseIndicator {
     
     override func setFrame() {
         
-        toBaseState()
+        setToBaseState()
         startAnimate()
     }
     
-    public override func toBaseState() {
+    public override func setToBaseState() {
         
         configStick(stick1, index: 0)
         configStick(stick2, index: 1)
@@ -61,7 +63,7 @@ public class Indicator1: BaseIndicator {
         configStick(stick5, index: 4)
     }
     
-    override func configStick(_ stick: UIView, index: Int) {
+    private func configStick(_ stick: UIView, index: Int) {
         
         if index == 0 || index == 4 {
             stick.frame.size = CGSize(width: frame.width / 9, height: frame.height)
@@ -86,18 +88,18 @@ public class Indicator1: BaseIndicator {
         animate(view: stick5, duration: 0)
     }
     
-    override func animate(view: UIView, duration: Double) {
+    private func animate(view: UIView, duration: Double) {
         
+        view.layer.removeAllAnimations()
         //Beginning animate
         CATransaction.begin()
         CATransaction.setAnimationDuration(duration)
         
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
         
-        let sizeAnimation = Animations.heightAnimation
-        sizeAnimation.fromValue = view.frame.size.height
-        sizeAnimation.toValue = self.frame.size.height
-        sizeAnimation.isRemovedOnCompletion = true
+        heightAnimation1.fromValue = view.frame.size.height
+        heightAnimation1.toValue = self.frame.size.height
+        heightAnimation1.isRemovedOnCompletion = true
         
         CATransaction.setCompletionBlock {
             
@@ -106,17 +108,17 @@ public class Indicator1: BaseIndicator {
             CATransaction.setAnimationDuration(0.5)
             CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
             
-            let sizeAnimation2 = Animations.heightAnimation
-            sizeAnimation2.fromValue = self.frame.size.height
-            sizeAnimation2.toValue = self.frame.size.height / 3
-            sizeAnimation2.autoreverses = true
-            sizeAnimation2.repeatCount = HUGE
-            view.layer.add(sizeAnimation2, forKey: "indicator1_HeightAnimate")
+            self.heightAnimation2.fromValue = self.frame.size.height
+            self.heightAnimation2.toValue = self.frame.size.height / 3
+            self.heightAnimation2.autoreverses = true
+            self.heightAnimation2.repeatCount = HUGE
+            self.heightAnimation2.isRemovedOnCompletion = false
+            view.layer.add(self.heightAnimation2, forKey: view.description)
             
             CATransaction.commit()
         }
         
-        view.layer.add(sizeAnimation, forKey: nil)
+        view.layer.add(heightAnimation1, forKey: nil)
         
         CATransaction.commit()
     }

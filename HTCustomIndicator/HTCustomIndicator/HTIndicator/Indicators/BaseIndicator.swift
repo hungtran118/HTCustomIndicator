@@ -30,14 +30,8 @@ public class BaseIndicator: UIView {
     
     func setColor() {}
     func setFrame() {}
-    
-    public func toBaseState() {}
-    
-    func configStick(_ stick: UIView, index: Int) {}
-    
+    public func setToBaseState() {}
     public func startAnimate() {}
-    
-    func animate(view: UIView, duration: Double) {}
 }
 
 

@@ -14,15 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        htIndicator.color = .blue
+        let htIndicator1 = HTIndicator()
+        htIndicator1.frame = CGRect(x: 100, y: 100, width: 60, height: 60)
+        htIndicator1.indicatorType = .indicator1
         
         let htIndicator2 = HTIndicator()
-        htIndicator2.color = .red
-        htIndicator2.frame = CGRect(x: 200, y: 200, width: 50, height: 50)
-        htIndicator2.indicatorType = .indicator1
+        htIndicator2.frame = CGRect(x: 200, y: 100, width: 60, height: 60)
+        htIndicator2.indicatorType = .indicator2
         
+        self.view.addSubview(htIndicator1)
         self.view.addSubview(htIndicator2)
-        
         
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 public class HTIndicator: UIView {
     
     //MARK:- SUPPORT VARIABLES
-    var isStarted: Bool = false
+    private var isStarted: Bool = false
     
     //MARK:- Custom
     
@@ -84,6 +84,8 @@ public class HTIndicator: UIView {
         switch indicatorType {
         case .indicator1:
             indicator = Indicator1(frame: prettyFrame)
+        case .indicator2:
+            indicator = Indicator2(frame: prettyFrame)
         default:
             indicator = Indicator1(frame: prettyFrame)
         }
