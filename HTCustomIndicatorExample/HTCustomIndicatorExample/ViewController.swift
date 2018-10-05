@@ -30,30 +30,44 @@ class ViewController: UIViewController {
         
         let htIndicator5 = HTIndicator(frame: CGRect(x: 150, y: 150, width: 60, height: 60), type: .indicator5)
         
+        let htIndicator6 = HTIndicator(frame: CGRect(x: 250, y: 150, width: 60, height: 60), type: .indicator6)
+        
+        let htIndicator7 = HTIndicator(frame: CGRect(x: 50, y: 250, width: 60, height: 60), type: .indicator7)
+        
+        htIndicator1.color = .black
+        htIndicator2.color = .black
+        htIndicator3.color = .black
+        htIndicator4.color = .black
+        htIndicator5.color = .black
+        htIndicator6.color = .black
+        htIndicator7.color = .black
+        
         self.view.addSubview(htIndicator1)
         self.view.addSubview(htIndicator2)
         self.view.addSubview(htIndicator3)
         self.view.addSubview(htIndicator4)
         self.view.addSubview(htIndicator5)
+        self.view.addSubview(htIndicator6)
+        self.view.addSubview(htIndicator7)
     }
     
     @IBAction func test(_ sender: Any) {
         
         ProgressView.shared.show()
-        if #available(iOS 10.0, *) {
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (timer) in
-                ProgressView.shared.hide()
-            }
-        }
+        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(hideProgressView), userInfo: nil, repeats: false)
+    }
+    
+    @objc private func hideProgressView() {
+        ProgressView.shared.hide()
     }
 }
 
-class ProgressView {
+public class ProgressView {
     
     //MARK:- SUPPORT VARIABLES
     static let shared = ProgressView()
     private let containerView = UIView()
-    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator5)
+    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator7)
     private var isShowing = false
     
     //MARK: - Main functions

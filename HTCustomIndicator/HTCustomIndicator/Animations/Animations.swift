@@ -14,6 +14,8 @@ class Animations {
     let cornerRadiusAnimation = CABasicAnimation(keyPath: "cornerRadius")
     let fadeAnimation = CABasicAnimation(keyPath: "opacity")
     let yPosAnimation = CABasicAnimation(keyPath: "position.y")
+    let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
+    let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
 }
 
 

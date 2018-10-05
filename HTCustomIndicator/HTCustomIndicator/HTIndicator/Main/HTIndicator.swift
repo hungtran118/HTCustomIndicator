@@ -39,6 +39,13 @@ public class HTIndicator: UIView {
         }
     }
     
+    public override var center: CGPoint {
+        didSet {
+            indicator.frame = CGRect(x: 0, y: 0, width: min(frame.width, frame.height), height: min(frame.width, frame.height))
+            indicator.setFrame()
+        }
+    }
+    
     //MARK:- Init
     
     //Create base indicator class
@@ -92,6 +99,10 @@ public class HTIndicator: UIView {
             indicator = Indicator4(frame: prettyFrame)
         case .indicator5:
             indicator = Indicator5(frame: prettyFrame)
+        case .indicator6:
+            indicator = Indicator6(frame: prettyFrame)
+        case .indicator7:
+            indicator = Indicator7(frame: prettyFrame)
         }
     }
 }
