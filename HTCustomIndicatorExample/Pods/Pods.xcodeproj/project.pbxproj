@@ -16,6 +16,7 @@
 		8A03F46321646117000D8CBD /* IndicatorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03F46221646117000D8CBD /* IndicatorTypes.swift */; };
 		8A2516072165BDCE00D18D01 /* Indicator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2516062165BDCE00D18D01 /* Indicator2.swift */; };
 		8A2516452165EB7C00D18D01 /* Indicator3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2516442165EB7C00D18D01 /* Indicator3.swift */; };
+		8A2C8E222166FE250057C15B /* Indicator4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2C8E212166FE250057C15B /* Indicator4.swift */; };
 		8AD233C4215A0AC1003DEAB5 /* Indicator1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD233C3215A0AC1003DEAB5 /* Indicator1.swift */; };
 		8AD233C7215A0CE3003DEAB5 /* BaseIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */; };
 		ACBFF32799E76B0E559B8182E2DB1BA7 /* HTCustomIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */; };
@@ -51,6 +52,7 @@
 		8A03F46221646117000D8CBD /* IndicatorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorTypes.swift; sourceTree = "<group>"; };
 		8A2516062165BDCE00D18D01 /* Indicator2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator2.swift; sourceTree = "<group>"; };
 		8A2516442165EB7C00D18D01 /* Indicator3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator3.swift; sourceTree = "<group>"; };
+		8A2C8E212166FE250057C15B /* Indicator4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator4.swift; sourceTree = "<group>"; };
 		8AD233C3215A0AC1003DEAB5 /* Indicator1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator1.swift; sourceTree = "<group>"; };
 		8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseIndicator.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -148,6 +150,7 @@
 				8AD233C3215A0AC1003DEAB5 /* Indicator1.swift */,
 				8A2516062165BDCE00D18D01 /* Indicator2.swift */,
 				8A2516442165EB7C00D18D01 /* Indicator3.swift */,
+				8A2C8E212166FE250057C15B /* Indicator4.swift */,
 			);
 			path = Indicators;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				7433135EAD23A2BA0F2D78B60D92AC40 /* HTIndicator.swift in Sources */,
 				8A2516072165BDCE00D18D01 /* Indicator2.swift in Sources */,
 				8A03F46121645EB9000D8CBD /* Animations.swift in Sources */,
+				8A2C8E222166FE250057C15B /* Indicator4.swift in Sources */,
 				8A03F46321646117000D8CBD /* IndicatorTypes.swift in Sources */,
 				7F92D69B950DB0D2C2CFAADDB024DDC6 /* Info.plist in Sources */,
 				8A2516452165EB7C00D18D01 /* Indicator3.swift in Sources */,
