@@ -94,6 +94,7 @@ public class Indicator1: BaseIndicator {
     private func animate(view: UIView, duration: Double) {
         
         view.layer.removeAllAnimations()
+        
         //Beginning animate
         CATransaction.begin()
         CATransaction.setAnimationDuration(duration)

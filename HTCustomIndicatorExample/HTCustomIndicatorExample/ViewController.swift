@@ -28,10 +28,13 @@ class ViewController: UIViewController {
         
         let htIndicator4 = HTIndicator(frame: CGRect(x: 50, y: 150, width: 60, height: 60), type: .indicator4)
         
+        let htIndicator5 = HTIndicator(frame: CGRect(x: 150, y: 150, width: 60, height: 60), type: .indicator5)
+        
         self.view.addSubview(htIndicator1)
         self.view.addSubview(htIndicator2)
         self.view.addSubview(htIndicator3)
         self.view.addSubview(htIndicator4)
+        self.view.addSubview(htIndicator5)
     }
     
     @IBAction func test(_ sender: Any) {
@@ -50,7 +53,7 @@ class ProgressView {
     //MARK:- SUPPORT VARIABLES
     static let shared = ProgressView()
     private let containerView = UIView()
-    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator1)
+    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator5)
     private var isShowing = false
     
     //MARK: - Main functions
