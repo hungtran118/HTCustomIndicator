@@ -34,13 +34,16 @@ class ViewController: UIViewController {
         
         let htIndicator7 = HTIndicator(frame: CGRect(x: 50, y: 250, width: 60, height: 60), type: .indicator7)
         
-        htIndicator1.color = .black
-        htIndicator2.color = .black
-        htIndicator3.color = .black
-        htIndicator4.color = .black
-        htIndicator5.color = .black
-        htIndicator6.color = .black
-        htIndicator7.color = .black
+        let htIndicator8 = HTIndicator(frame: CGRect(x: 150, y: 250, width: 60, height: 60), type: .indicator8)
+        
+//        htIndicator1.color = .black
+//        htIndicator2.color = .black
+//        htIndicator3.color = .black
+//        htIndicator4.color = .black
+//        htIndicator5.color = .black
+//        htIndicator6.color = .black
+//        htIndicator7.color = .black
+//        htIndicator8.color = .black
         
         self.view.addSubview(htIndicator1)
         self.view.addSubview(htIndicator2)
@@ -49,6 +52,7 @@ class ViewController: UIViewController {
         self.view.addSubview(htIndicator5)
         self.view.addSubview(htIndicator6)
         self.view.addSubview(htIndicator7)
+        self.view.addSubview(htIndicator8)
     }
     
     @IBAction func test(_ sender: Any) {
@@ -67,7 +71,7 @@ public class ProgressView {
     //MARK:- SUPPORT VARIABLES
     static let shared = ProgressView()
     private let containerView = UIView()
-    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator7)
+    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator8)
     private var isShowing = false
     
     //MARK: - Main functions
