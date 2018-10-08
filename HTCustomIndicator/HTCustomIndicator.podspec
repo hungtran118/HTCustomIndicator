@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HTCustomIndicator"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Custom Indicator"
   s.description  = "Create some awesome indicators"
   s.homepage     = "https://github.com/hungtran118/HTCustomIndicator"
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "HungTran" => "hung.tgh95@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/hungtran118/HTCustomIndicator.git", :tag => "0.0.5" }
+  s.source       = { :git => "https://github.com/hungtran118/HTCustomIndicator.git", :tag => "0.0.6" }
   s.source_files  = "HTCustomIndicator/**/*"
 
 end
