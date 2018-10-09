@@ -124,6 +124,8 @@ class Indicator7: BaseIndicator {
         circleLayer.add(groupAnimation, forKey: "animateCircle")
         
         timer = Timer.scheduledTimer(timeInterval: 0.9, target: self, selector: #selector(changeLayerPath), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: .commonModes)
+        
     }
     
     @objc private func changeLayerPath() {
