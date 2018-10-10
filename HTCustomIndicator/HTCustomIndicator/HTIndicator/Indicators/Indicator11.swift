@@ -1,5 +1,5 @@
 //
-//  Indicator1.swift
+//  Indicator11.swift
 //  HTCustomIndicator
 //
 //  Created by UltraHigh on 9/25/18.
