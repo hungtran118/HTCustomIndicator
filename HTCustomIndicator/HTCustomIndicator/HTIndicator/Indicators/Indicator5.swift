@@ -1,5 +1,5 @@
 //
-//  Indicator5.swift
+//  Indicator7.swift
 //  HTCustomIndicator
 //
 //  Created by UltraHigh on 10/5/18.
@@ -11,14 +11,17 @@ class Indicator5: BaseIndicator {
     
     //MARK:- SUPPORT VARIABLES
     
-    private var dot1 = UIView()
-    private var dot2 = UIView()
-    private var dot3 = UIView()
-    private var dot4 = UIView()
-    private var dot5 = UIView()
-    private var dot6 = UIView()
-    private var dot7 = UIView()
-    private var dot8 = UIView()
+    private var circleLayer = CAShapeLayer()
+    private var circlePath = UIBezierPath()
+    private var containerView = UIView()
+    
+    private let groupAnimation = CAAnimationGroup()
+    private let animationFull = Animations().strokeEndAnimation
+    private let animationEmpty = Animations().strokeEndAnimation
+    private let rotateAnimation = Animations().rotateAnimation
+    
+    private var isClockwise: Bool = false
+    private var timer = Timer()
     
     //MARK:- Init
     
@@ -28,15 +31,8 @@ class Indicator5: BaseIndicator {
         self.backgroundColor = UIColor.clear
         self.setColor()
         self.setToBaseState()
-        self.addSubview(dot1)
-        self.addSubview(dot2)
-        self.addSubview(dot3)
-        self.addSubview(dot4)
-        self.addSubview(dot5)
-        self.addSubview(dot6)
-        self.addSubview(dot7)
-        self.addSubview(dot8)
-        
+        self.addSubview(containerView)
+        self.containerView.layer.addSublayer(self.circleLayer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,14 +43,7 @@ class Indicator5: BaseIndicator {
     
     override func setColor() {
         
-        dot1.backgroundColor = self.color
-        dot2.backgroundColor = self.color
-        dot3.backgroundColor = self.color
-        dot4.backgroundColor = self.color
-        dot5.backgroundColor = self.color
-        dot6.backgroundColor = self.color
-        dot7.backgroundColor = self.color
-        dot8.backgroundColor = self.color
+        circleLayer.strokeColor = self.color.cgColor
     }
     
     override func setFrame() {
@@ -66,182 +55,90 @@ class Indicator5: BaseIndicator {
     override func setToBaseState() {
         super.setToBaseState()
         
-        let dotSize = self.frame.width * 0.2
-        let midPos = (self.frame.width - dotSize) / 2
-        
-        //top
-        configDot(dot1, frame: CGRect(x: midPos, y: 0, width: dotSize, height: dotSize), index: 0)
-        
-        //top right
-        configDot(dot2, frame: CGRect(x: midPos + (midPos / sqrt(2)), y: midPos - (midPos / sqrt(2)), width: dotSize, height: dotSize), index: 1)
-        
-        //right
-        configDot(dot3, frame: CGRect(x: midPos * 2, y: midPos, width: dotSize, height: dotSize), index: 2)
-        
-        //bot right
-        configDot(dot4, frame:  CGRect(x: midPos + (midPos / sqrt(2)), y: midPos + (midPos / sqrt(2)), width: dotSize, height: dotSize), index: 3)
-        
-        //bot
-        configDot(dot5, frame: CGRect(x: midPos, y: midPos * 2, width: dotSize, height: dotSize), index: 4)
-        
-        //bot left
-        configDot(dot6, frame: CGRect(x: midPos - (midPos / sqrt(2)), y: midPos + (midPos / sqrt(2)), width: dotSize, height: dotSize), index: 5)
-        
-        //left
-        configDot(dot7, frame: CGRect(x: 0, y: midPos, width: dotSize, height: dotSize), index: 6)
-        
-        //top left
-        configDot(dot8, frame: CGRect(x: midPos - (midPos / sqrt(2)), y: midPos - (midPos / sqrt(2)), width: dotSize, height: dotSize), index: 7)
+        configContainer()
+        configCircle()
     }
     
-    private func configDot(_ dot: UIView, frame: CGRect, index: Int) {
+    private func configContainer() {
         
-        dot.frame.origin = frame.origin
+        containerView = UIView(frame: self.bounds)
+        containerView.layoutIfNeeded()
+    }
+    
+    private func configCircle() {
         
-        if index == 0 {
-            dot.frame.size = frame.size
-        } else if index == 1 || index == 7 {
-            dot.frame.size = CGSize(width: frame.size.width * 7/8, height: frame.size.width * 7/8)
-            dot.alpha = 7/8
-        } else if index == 2 || index == 6 {
-            dot.frame.size = CGSize(width: frame.size.width * 6/8, height: frame.size.width * 6/8)
-            dot.alpha = 6/8
-        } else if index == 3 || index == 5 {
-            dot.frame.size = CGSize(width: frame.size.width * 5/8, height: frame.size.width * 5/8)
-            dot.alpha = 5/8
-        } else {
-            dot.frame.size = CGSize(width: frame.size.width * 4/8, height: frame.size.width * 4/8)
-            dot.alpha = 4/8
-        }
+        circleLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: 0, endAngle: 7, clockwise: true).cgPath
         
-        dot.layer.cornerRadius = dot.frame.width / 2
-        dot.layer.masksToBounds = dot.frame.width / 2 > 0
-        dot.layoutIfNeeded()
+        circleLayer.fillColor = UIColor.clear.cgColor
+        circleLayer.strokeColor = color.cgColor
+        circleLayer.lineWidth = frame.width / 20
+        circleLayer.strokeEnd = 0.8
+        circleLayer.layoutIfNeeded()
     }
     
     override func startAnimate() {
         super.startAnimate()
         
-        configAnimate(dot1, index: 0)
-        configAnimate(dot2, index: 1)
-        configAnimate(dot3, index: 2)
-        configAnimate(dot4, index: 3)
-        configAnimate(dot5, index: 4)
-        configAnimate(dot6, index: 5)
-        configAnimate(dot7, index: 6)
-        configAnimate(dot8, index: 7)
+        animateRotate()
+        animateCircle()
     }
     
-    private func configAnimate(_ view: UIView, index: Int) {
+    private func animateRotate() {
         
-        let dotSize = self.frame.width * 0.2
-        var duration: Double = 0
-        var beginSize: CGFloat = 0
-        var beginAlpha: CGFloat = 0
-        var commingSize: CGFloat = 0
-        var commingAlpha: CGFloat = 0
+        rotateAnimation.fromValue = 0
+        rotateAnimation.toValue = CGFloat.pi * 2
+        rotateAnimation.duration = 1.2
+        rotateAnimation.repeatCount = HUGE
+        rotateAnimation.isRemovedOnCompletion = false
         
-        //Config duration
-        if index == 0 || index == 4 {
-            duration = 0
-        } else if index == 1 || index == 5 {
-            duration = 0.5 - 3/8
-        } else if index == 2 || index == 6 {
-            duration = 0.5 - 2/8
-        } else if index == 3 || index == 7 {
-            duration = 0.5 - 1/8
-        } else {
-            duration = 0.5
-        }
-        
-        //Config effect
-        if index == 0 || index == 1 || index == 2 || index == 3 {
-            beginSize = dotSize
-            beginAlpha = 1
-            commingSize = dotSize / 2
-            commingAlpha = 0.5
-        } else {
-            beginSize = dotSize / 2
-            beginAlpha = 0.5
-            commingSize = dotSize
-            commingAlpha = 1
-        }
-        
-        configAniamte(view: view, duration: duration, beginSize: beginSize, beginAlpha: beginAlpha, commingSize: commingSize, commingAlpha: commingAlpha)
+        containerView.layer.removeAllAnimations()
+        containerView.layer.add(rotateAnimation, forKey: nil)
     }
     
-    private func configAniamte(view: UIView, duration: Double, beginSize: CGFloat, beginAlpha: CGFloat, commingSize: CGFloat, commingAlpha: CGFloat) {
+    private func animateCircle() {
         
-        view.layer.removeAllAnimations()
+        circleLayer.removeAllAnimations()
+        timer.invalidate()
         
-        //Beginning animate
-        CATransaction.begin()
-        CATransaction.setAnimationDuration(duration)
-        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
+        animationFull.duration = 0.5
+        animationFull.fromValue = 0
+        animationFull.toValue = 0.8
+        animationFull.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animationFull.fillMode = kCAFillModeForwards
+        animationFull.isRemovedOnCompletion = false
         
-        let groupAnimation = CAAnimationGroup()
-        let sizeAnimation = Animations().sizeAnimation
-        let cornerRadiusAnimation = Animations().cornerRadiusAnimation
-        let fadeAnimation = Animations().fadeAnimation
+        animationEmpty.duration = 0.5
+        animationEmpty.beginTime = 0.9
+        animationEmpty.fromValue = 0.8
+        animationEmpty.toValue = 0
+        animationEmpty.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animationEmpty.fillMode = kCAFillModeForwards
+        animationEmpty.isRemovedOnCompletion = false
         
+        groupAnimation.animations = [animationFull, animationEmpty]
+        groupAnimation.duration = 1.8
+        groupAnimation.repeatCount = HUGE
         groupAnimation.fillMode = kCAFillModeForwards
         groupAnimation.isRemovedOnCompletion = false
         
-        sizeAnimation.fromValue = NSValue(cgSize: view.frame.size)
-        sizeAnimation.toValue = NSValue(cgSize: CGSize(width: beginSize, height: beginSize))
+        circleLayer.add(groupAnimation, forKey: "animateCircle")
         
-        cornerRadiusAnimation.fromValue = view.frame.size.width / 2
-        cornerRadiusAnimation.toValue = beginSize / 2
+        timer = Timer.scheduledTimer(timeInterval: 0.9, target: self, selector: #selector(changeLayerPath), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: .commonModes)
         
-        fadeAnimation.fromValue = view.alpha
-        fadeAnimation.toValue = beginAlpha
+    }
+    
+    @objc private func changeLayerPath() {
         
-        CATransaction.setCompletionBlock {
-            
-            //Comming animate
-            CATransaction.begin()
-            CATransaction.setAnimationDuration(0.5)
-            CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-            
-            let groupAnimation2 = CAAnimationGroup()
-            let sizeAnimation2 = Animations().sizeAnimation
-            let cornerRadiusAnimation2 = Animations().cornerRadiusAnimation
-            let fadeAnimation2 = Animations().fadeAnimation
-            
-            groupAnimation2.autoreverses = true
-            groupAnimation2.repeatCount = HUGE
-            
-            sizeAnimation2.fromValue = NSValue(cgSize: CGSize(width: beginSize, height: beginSize))
-            sizeAnimation2.toValue = NSValue(cgSize: CGSize(width: commingSize, height: commingSize))
-            
-            cornerRadiusAnimation2.fromValue = beginSize / 2
-            cornerRadiusAnimation2.toValue = commingSize / 2
-            
-            fadeAnimation2.fromValue = beginAlpha
-            fadeAnimation2.toValue = commingAlpha
-            
-            groupAnimation2.animations = [sizeAnimation2, cornerRadiusAnimation2, fadeAnimation2]
-            groupAnimation2.isRemovedOnCompletion = false
-            view.layer.add(groupAnimation2, forKey: "\(view.description)2")
-            
-            CATransaction.commit()
+        if isClockwise {
+            circleLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: 0, endAngle: 7, clockwise: true).cgPath
+        } else {
+            circleLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -0.69, endAngle: -7.7, clockwise: false).cgPath
         }
         
-        groupAnimation.animations = [sizeAnimation, cornerRadiusAnimation, fadeAnimation]
-        view.layer.add(groupAnimation, forKey: "\(view.description)1")
-        
-        CATransaction.commit()
+        isClockwise = !isClockwise
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 

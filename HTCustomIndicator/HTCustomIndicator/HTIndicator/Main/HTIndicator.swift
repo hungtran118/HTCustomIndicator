@@ -109,6 +109,8 @@ public class HTIndicator: UIView {
             indicator = Indicator9(frame: prettyFrame)
         case .indicator10:
             indicator = Indicator10(frame: prettyFrame)
+        case .indicator11:
+            indicator = Indicator11(frame: prettyFrame)
         }
     }
 }

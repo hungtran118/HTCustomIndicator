@@ -2,31 +2,36 @@
 //  Indicator9.swift
 //  HTCustomIndicator
 //
-//  Created by UltraHigh on 10/9/18.
+//  Created by UltraHigh on 10/10/18.
 //
 
 import Foundation
 
-public class Indicator9: BaseIndicator {
+class Indicator9: BaseIndicator {
     
     //MARK:- SUPPORT VARIABLES
-
-    private let rotateAnimation = Animations().rotateAnimation
-    private var radial: RadialCircleView?
+    
+    private var dot1 = UIView()
+    private var dot2 = UIView()
+    private var dot3 = UIView()
+    
+    private let groupAnimation = CAAnimationGroup()
+//    private let xPosAnimation = Animations().xPosAnimation
     
     //MARK:- Init
     
-    override public init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: min(frame.width, frame.height), height: min(frame.width, frame.height)))
         
-        self.backgroundColor = .clear
-        self.setToBaseState()
+        self.backgroundColor = UIColor.clear
         self.setColor()
-        self.addSubview(radial!)
-        
+        self.setToBaseState()
+        self.addSubview(dot1)
+        self.addSubview(dot2)
+        self.addSubview(dot3)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -34,12 +39,9 @@ public class Indicator9: BaseIndicator {
     
     override func setColor() {
         
-        radial?.removeFromSuperview()
-        radial = RadialCircleView(frame: self.bounds, strokeColor: self.color)
-        radial?.center = self.center
-        radial?.backgroundColor = .clear
-        self.addSubview(radial!)
-        animate()
+        dot1.backgroundColor = self.color
+        dot2.backgroundColor = self.color
+        dot3.backgroundColor = self.color
     }
     
     override func setFrame() {
@@ -51,73 +53,68 @@ public class Indicator9: BaseIndicator {
     override func setToBaseState() {
         super.setToBaseState()
         
-        configCircle()
+        configDot(dot1, index: 0)
+        configDot(dot2, index: 1)
+        configDot(dot3, index: 2)
     }
     
-    private func configCircle() {
+    private func configDot(_ dot: UIView, index: Int){
         
-        radial = RadialCircleView(frame: self.bounds, strokeColor: self.color)
-        radial?.center = self.center
-        radial?.backgroundColor = .clear
+        let dotSize = self.frame.width / 3
+        
+        dot.frame = CGRect(x: CGFloat(index) * dotSize, y: (self.frame.width - dotSize) / 2, width: dotSize, height: dotSize)
+        dot.backgroundColor = self.color
+        dot.layer.cornerRadius = dotSize / 2
+        dot.layoutIfNeeded()
     }
     
-    override public func startAnimate() {
+    override func startAnimate() {
         super.startAnimate()
         
-        animate()
+        animate(dot: dot1, index: 0)
+        animate(dot: dot3, index: 2)
     }
     
-    private func animate() {
+    private func animate(dot: UIView, index: Int) {
         
-        rotateAnimation.fromValue = 0
-        rotateAnimation.toValue = CGFloat.pi * 2
-        rotateAnimation.duration = 1
-        rotateAnimation.repeatCount = HUGE
-        rotateAnimation.isRemovedOnCompletion = false
+        dot.layer.removeAllAnimations()
         
-        radial?.layer.removeAllAnimations()
-        radial?.layer.add(rotateAnimation, forKey: nil)
+        let dotSize = self.frame.width / 3
+        
+        groupAnimation.duration = 1
+        groupAnimation.beginTime = round(10*CACurrentMediaTime())/10 + (index == 0 ? 0 : 0.5)
+        groupAnimation.repeatCount = HUGE
+        
+        let xPosAnimation = Animations().xPosAnimation
+        xPosAnimation.fromValue = (index == 0 ? 0.5*dotSize : 2.5*dotSize)
+        xPosAnimation.toValue = (index == 0 ? -0.7*dotSize : 3.7*dotSize)
+        xPosAnimation.duration = 0.25
+        xPosAnimation.autoreverses = true
+        xPosAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        groupAnimation.animations = [xPosAnimation]
+        groupAnimation.isRemovedOnCompletion = false
+        
+        dot.layer.add(groupAnimation, forKey: dot.description)
+        
     }
 }
 
-class RadialCircleView: UIView {
-    
-    var strokeColor = UIColor.clear
-    
-    init(frame: CGRect, strokeColor: UIColor) {
-        super.init(frame: frame)
-        
-        self.strokeColor = strokeColor
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        guard let colorComponents = strokeColor.cgColor.components else { return }
-        
-        let thickness: CGFloat = rect.width / 10
-        let center = CGPoint(x: bounds.midX, y: bounds.midY)
-        let radius = min(bounds.width, bounds.height) / 2 - thickness / 2
-        var last: CGFloat = 0
-        
-        for i in 1...360 {
-            
-            let ang = CGFloat(i) / 180 * .pi
-            let arc = UIBezierPath(arcCenter: center, radius: radius, startAngle: last, endAngle: ang, clockwise: true)
-            arc.lineWidth = thickness
-            last = ang
-            
-            if colorComponents.count == 4 {
-                UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: colorComponents[3] * CGFloat(i) / 360).set()
-            } else {
-                UIColor(white: colorComponents[0], alpha: colorComponents[1] * CGFloat(i) / 360).set()
-            }
-            
-            arc.stroke()
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

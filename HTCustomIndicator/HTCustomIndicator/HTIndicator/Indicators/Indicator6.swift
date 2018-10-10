@@ -1,44 +1,32 @@
 //
-//  Indicator6.swift
+//  Indicator9.swift
 //  HTCustomIndicator
 //
-//  Created by UltraHigh on 10/5/18.
+//  Created by UltraHigh on 10/9/18.
 //
 
 import Foundation
 
-class Indicator6: BaseIndicator {
+public class Indicator6: BaseIndicator {
     
     //MARK:- SUPPORT VARIABLES
-    
-    private var circle1 = UIView()
-    private var circle2 = UIView()
-    private var circle3 = UIView()
-    private var circle4 = UIView()
-    private var circle5 = UIView()
-    
-    private let groupAnimation = CAAnimationGroup()
-    private let sizeAnimation = Animations().sizeAnimation
-    private let cornerRadiusAnimation = Animations().cornerRadiusAnimation
-    private let fadeAnimation = Animations().fadeAnimation
-    private let fadeOutAnimation = Animations().fadeAnimation
+
+    private let rotateAnimation = Animations().rotateAnimation
+    private var radial: RadialCircleView?
     
     //MARK:- Init
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: min(frame.width, frame.height), height: min(frame.width, frame.height)))
         
-        self.backgroundColor = UIColor.clear
-        self.setColor()
+        self.backgroundColor = .clear
         self.setToBaseState()
-        self.addSubview(circle1)
-        self.addSubview(circle2)
-        self.addSubview(circle3)
-        self.addSubview(circle4)
-        self.addSubview(circle5)
+        self.setColor()
+        self.addSubview(radial!)
+        
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -46,11 +34,12 @@ class Indicator6: BaseIndicator {
     
     override func setColor() {
         
-        circle1.layer.borderColor = self.color.cgColor
-        circle2.layer.borderColor = self.color.cgColor
-        circle3.layer.borderColor = self.color.cgColor
-        circle4.layer.borderColor = self.color.cgColor
-        circle5.layer.borderColor = self.color.cgColor
+        radial?.removeFromSuperview()
+        radial = RadialCircleView(frame: self.bounds, strokeColor: self.color)
+        radial?.center = self.center
+        radial?.backgroundColor = .clear
+        self.addSubview(radial!)
+        animate()
     }
     
     override func setFrame() {
@@ -62,88 +51,73 @@ class Indicator6: BaseIndicator {
     override func setToBaseState() {
         super.setToBaseState()
         
-        configCircle(circle1)
-        configCircle(circle2)
-        configCircle(circle3)
-        configCircle(circle4)
-        configCircle(circle5)
+        configCircle()
     }
     
-    private func configCircle(_ circle: UIView) {
+    private func configCircle() {
         
-        circle.frame = CGRect(x: frame.size.width / 2, y: frame.size.width / 2, width: 0, height: 0)
-        circle.layer.borderColor = self.color.cgColor
-        circle.layer.borderWidth = frame.size.width / 40
-        circle.alpha = 0.1
-        circle.layoutIfNeeded()
+        radial = RadialCircleView(frame: self.bounds, strokeColor: self.color)
+        radial?.center = self.center
+        radial?.backgroundColor = .clear
     }
     
-    override func startAnimate() {
+    override public func startAnimate() {
         super.startAnimate()
         
-        animate(view: circle1, delay: 0)
-        animate(view: circle2, delay: 0.1)
-        animate(view: circle3, delay: 0.2)
-        animate(view: circle4, delay: 0.3)
-        animate(view: circle5, delay: 0.4)
+        animate()
     }
     
-    private func animate(view: UIView, delay: TimeInterval) {
+    private func animate() {
         
-        view.layer.removeAllAnimations()
+        rotateAnimation.fromValue = 0
+        rotateAnimation.toValue = CGFloat.pi * 2
+        rotateAnimation.duration = 1
+        rotateAnimation.repeatCount = HUGE
+        rotateAnimation.isRemovedOnCompletion = false
         
-        groupAnimation.beginTime = round(10*CACurrentMediaTime())/10 + delay
-        groupAnimation.repeatCount = HUGE
-        groupAnimation.duration = 1.2
-        groupAnimation.isRemovedOnCompletion = false
-        
-        sizeAnimation.fromValue = NSValue(cgSize: CGSize.zero)
-        sizeAnimation.toValue = NSValue(cgSize: CGSize(width: self.frame.size.width, height: self.frame.size.width))
-        sizeAnimation.isRemovedOnCompletion = false
-        sizeAnimation.fillMode = kCAFillModeForwards
-        sizeAnimation.duration = 0.7
-        
-        cornerRadiusAnimation.fromValue = 0
-        cornerRadiusAnimation.toValue = self.frame.width / 2
-        cornerRadiusAnimation.isRemovedOnCompletion = false
-        cornerRadiusAnimation.fillMode = kCAFillModeForwards
-        cornerRadiusAnimation.duration = 0.7
-        
-        fadeAnimation.fromValue = 0.1
-        fadeAnimation.toValue = 0.6
-        fadeAnimation.isRemovedOnCompletion = false
-        fadeAnimation.fillMode = kCAFillModeForwards
-        fadeAnimation.duration = 0.7
-        
-        fadeOutAnimation.fromValue = 0.6
-        fadeOutAnimation.toValue = 0
-        fadeOutAnimation.isRemovedOnCompletion = false
-        fadeOutAnimation.fillMode = kCAFillModeForwards
-        fadeOutAnimation.duration = 0.5
-        fadeOutAnimation.beginTime = 0.7
-        
-        groupAnimation.animations = [sizeAnimation, cornerRadiusAnimation, fadeAnimation, fadeOutAnimation]
-        
-        view.layer.add(groupAnimation, forKey: view.description)
+        radial?.layer.removeAllAnimations()
+        radial?.layer.add(rotateAnimation, forKey: nil)
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class RadialCircleView: UIView {
+    
+    var strokeColor = UIColor.clear
+    
+    init(frame: CGRect, strokeColor: UIColor) {
+        super.init(frame: frame)
+        
+        self.strokeColor = strokeColor
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        guard let colorComponents = strokeColor.cgColor.components else { return }
+        
+        let thickness: CGFloat = rect.width / 10
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
+        let radius = min(bounds.width, bounds.height) / 2 - thickness / 2
+        var last: CGFloat = 0
+        
+        for i in 1...360 {
+            
+            let ang = CGFloat(i) / 180 * .pi
+            let arc = UIBezierPath(arcCenter: center, radius: radius, startAngle: last, endAngle: ang, clockwise: true)
+            arc.lineWidth = thickness
+            last = ang
+            
+            if colorComponents.count == 4 {
+                UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: colorComponents[3] * CGFloat(i) / 360).set()
+            } else {
+                UIColor(white: colorComponents[0], alpha: colorComponents[1] * CGFloat(i) / 360).set()
+            }
+            
+            arc.stroke()
+        }
+    }
+}

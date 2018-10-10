@@ -19,6 +19,7 @@ public enum HTIndicatorType {
     case indicator8
     case indicator9
     case indicator10
+    case indicator11
 }
 
 
