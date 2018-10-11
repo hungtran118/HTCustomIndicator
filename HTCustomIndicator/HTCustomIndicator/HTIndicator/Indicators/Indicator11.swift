@@ -133,29 +133,3 @@ public class Indicator11: BaseIndicator {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

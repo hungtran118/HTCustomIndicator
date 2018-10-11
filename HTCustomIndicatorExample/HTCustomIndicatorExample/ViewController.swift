@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         
         let htIndicator11 = HTIndicator(frame: CGRect(x: 150, y: 350, width: 60, height: 60), type: .indicator11)
         
+        let htIndicator12 = HTIndicator(frame: CGRect(x: 250, y: 350, width: 60, height: 60), type: .indicator12)
+        
 //        htIndicator1.color = .black
 //        htIndicator2.color = .black
 //        htIndicator3.color = .black
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
 //        htIndicator9.color = .black
 //        htIndicator10.color = .black
 //        htIndicator11.color = .black
+//        htIndicator12.color = .black
         
         self.view.addSubview(htIndicator1)
         self.view.addSubview(htIndicator2)
@@ -65,6 +68,7 @@ class ViewController: UIViewController {
         self.view.addSubview(htIndicator9)
         self.view.addSubview(htIndicator10)
         self.view.addSubview(htIndicator11)
+        self.view.addSubview(htIndicator12)
     }
     
     @IBAction func test(_ sender: Any) {

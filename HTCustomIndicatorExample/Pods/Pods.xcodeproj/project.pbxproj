@@ -24,6 +24,7 @@
 		8A370C04216AF68400623751 /* Indicator4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A370C03216AF68400623751 /* Indicator4.swift */; };
 		8A45D64B216C65690000075B /* Indicator6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45D64A216C65690000075B /* Indicator6.swift */; };
 		8A45D64D216CA0F70000075B /* Indicator10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45D64C216CA0F70000075B /* Indicator10.swift */; };
+		8A7F6026216F03CB00DFFC44 /* Indicator12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F6025216F03CB00DFFC44 /* Indicator12.swift */; };
 		8AD233C4215A0AC1003DEAB5 /* Indicator11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD233C3215A0AC1003DEAB5 /* Indicator11.swift */; };
 		8AD233C7215A0CE3003DEAB5 /* BaseIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */; };
 		ACBFF32799E76B0E559B8182E2DB1BA7 /* HTCustomIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006C3DF689C5168F7A4B429CBF1EC8D /* HTCustomIndicator-dummy.m */; };
@@ -67,6 +68,7 @@
 		8A370C03216AF68400623751 /* Indicator4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator4.swift; sourceTree = "<group>"; };
 		8A45D64A216C65690000075B /* Indicator6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator6.swift; sourceTree = "<group>"; };
 		8A45D64C216CA0F70000075B /* Indicator10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator10.swift; sourceTree = "<group>"; };
+		8A7F6025216F03CB00DFFC44 /* Indicator12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator12.swift; sourceTree = "<group>"; };
 		8AD233C3215A0AC1003DEAB5 /* Indicator11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator11.swift; sourceTree = "<group>"; };
 		8AD233C6215A0CE3003DEAB5 /* BaseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseIndicator.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -172,6 +174,7 @@
 				8A312B22216D8FAC007F20F1 /* Indicator9.swift */,
 				8A45D64C216CA0F70000075B /* Indicator10.swift */,
 				8AD233C3215A0AC1003DEAB5 /* Indicator11.swift */,
+				8A7F6025216F03CB00DFFC44 /* Indicator12.swift */,
 			);
 			path = Indicators;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				8A2516452165EB7C00D18D01 /* Indicator7.swift in Sources */,
 				8AD233C4215A0AC1003DEAB5 /* Indicator11.swift in Sources */,
 				8A2C8E28216742F30057C15B /* Indicator5.swift in Sources */,
+				8A7F6026216F03CB00DFFC44 /* Indicator12.swift in Sources */,
 				8AD233C7215A0CE3003DEAB5 /* BaseIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
