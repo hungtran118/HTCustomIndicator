@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class HTIndicator: UIView {
     
@@ -49,7 +50,7 @@ public class HTIndicator: UIView {
     //MARK:- Init
     
     //Create base indicator class
-    var indicator = BaseIndicator()
+    var indicator: BaseIndicator = BaseIndicator()
     
     //Instance normally
     public override init(frame: CGRect) {

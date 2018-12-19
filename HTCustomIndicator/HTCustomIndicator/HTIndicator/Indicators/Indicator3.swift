@@ -167,10 +167,10 @@ class Indicator3: BaseIndicator {
             commingAlpha = 1
         }
         
-        configAniamte(view: view, duration: duration, beginSize: beginSize, beginAlpha: beginAlpha, commingSize: commingSize, commingAlpha: commingAlpha)
+        animate(view: view, duration: duration, beginSize: beginSize, beginAlpha: beginAlpha, commingSize: commingSize, commingAlpha: commingAlpha)
     }
     
-    private func configAniamte(view: UIView, duration: Double, beginSize: CGFloat, beginAlpha: CGFloat, commingSize: CGFloat, commingAlpha: CGFloat) {
+    private func animate(view: UIView, duration: Double, beginSize: CGFloat, beginAlpha: CGFloat, commingSize: CGFloat, commingAlpha: CGFloat) {
         
         view.layer.removeAllAnimations()
         

@@ -87,7 +87,7 @@ public class ProgressView {
     //MARK:- SUPPORT VARIABLES
     static let shared = ProgressView()
     private let containerView = UIView()
-    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator11)
+    private let indicator = HTIndicator(frame: CGRect(x: 50, y: 50, width: 60, height: 60), type: .indicator12)
     private var isShowing = false
     
     //MARK: - Main functions
