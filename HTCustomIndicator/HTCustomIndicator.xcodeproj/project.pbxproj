@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5136689EC9769B8962A879AA /* Pods_HTCustomIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA654695AE39DDD87771602C /* Pods_HTCustomIndicator.framework */; };
 		8A29760C21460DCB00005DE0 /* HTCustomIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A29760A21460DCB00005DE0 /* HTCustomIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A29761321460DE500005DE0 /* HTIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29761221460DE500005DE0 /* HTIndicator.swift */; };
 		8A29763B2146572A00005DE0 /* RoundFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29763A2146572A00005DE0 /* RoundFill.swift */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45016B1444B3A0151EB6A1F4 /* Pods-HTCustomIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTCustomIndicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTCustomIndicator/Pods-HTCustomIndicator.debug.xcconfig"; sourceTree = "<group>"; };
+		4B420B40B4C41DC27FED2CBB /* Pods-HTCustomIndicator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTCustomIndicator.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTCustomIndicator/Pods-HTCustomIndicator.release.xcconfig"; sourceTree = "<group>"; };
 		8A29760721460DCB00005DE0 /* HTCustomIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTCustomIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A29760A21460DCB00005DE0 /* HTCustomIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTCustomIndicator.h; sourceTree = "<group>"; };
 		8A29760B21460DCB00005DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A29761221460DE500005DE0 /* HTIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTIndicator.swift; sourceTree = "<group>"; };
 		8A29763A2146572A00005DE0 /* RoundFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFill.swift; sourceTree = "<group>"; };
 		8A32E125214659CC00BEBF89 /* RoundEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundEmpty.swift; sourceTree = "<group>"; };
+		BA654695AE39DDD87771602C /* Pods_HTCustomIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTCustomIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5136689EC9769B8962A879AA /* Pods_HTCustomIndicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		425579496CFAEEA828B1A0F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45016B1444B3A0151EB6A1F4 /* Pods-HTCustomIndicator.debug.xcconfig */,
+				4B420B40B4C41DC27FED2CBB /* Pods-HTCustomIndicator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86498D36F1643ADC8EC21CA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA654695AE39DDD87771602C /* Pods_HTCustomIndicator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A2975FD21460DCB00005DE0 = {
 			isa = PBXGroup;
 			children = (
 				8A29760921460DCB00005DE0 /* HTCustomIndicator */,
 				8A29760821460DCB00005DE0 /* Products */,
+				425579496CFAEEA828B1A0F1 /* Pods */,
+				86498D36F1643ADC8EC21CA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A29760F21460DCB00005DE0 /* Build configuration list for PBXNativeTarget "HTCustomIndicator" */;
 			buildPhases = (
+				0F96DAC4EFDDDE22A04F3F7C /* [CP] Check Pods Manifest.lock */,
 				8A29760221460DCB00005DE0 /* Sources */,
 				8A29760321460DCB00005DE0 /* Frameworks */,
 				8A29760421460DCB00005DE0 /* Headers */,
@@ -150,6 +175,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F96DAC4EFDDDE22A04F3F7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HTCustomIndicator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A29760221460DCB00005DE0 /* Sources */ = {
@@ -287,6 +333,7 @@
 		};
 		8A29761021460DCB00005DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45016B1444B3A0151EB6A1F4 /* Pods-HTCustomIndicator.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -314,6 +361,7 @@
 		};
 		8A29761121460DCB00005DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B420B40B4C41DC27FED2CBB /* Pods-HTCustomIndicator.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
